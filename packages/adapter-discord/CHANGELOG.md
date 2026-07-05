@@ -1,5 +1,19 @@
 # @chat-adapter/discord
 
+## 4.33.0
+
+### Patch Changes
+
+- d4c52ca: use the shared `replaceBareMentions` scanner for `@mention` conversion so email addresses, `@handles` inside URLs, and mentions inside code spans are no longer mangled into Discord mentions, and already-formatted `<@id>` tokens are not double-wrapped
+- Updated dependencies [3abdc69]
+- Updated dependencies [0b63791]
+- Updated dependencies [0c761f1]
+- Updated dependencies [24a04d5]
+- Updated dependencies [d4c52ca]
+- Updated dependencies [076fe5d]
+  - chat@4.33.0
+  - @chat-adapter/shared@4.33.0
+
 ## 4.32.0
 
 ### Minor Changes

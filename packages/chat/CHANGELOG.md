@@ -1,5 +1,15 @@
 # chat
 
+## 4.33.0
+
+### Patch Changes
+
+- 3abdc69: docs(adapters): add Cloudflare Agents as a vendor-official state adapter (`agents/chat-sdk`) to the catalog and docs listing. It is hidden from the create-chat-sdk CLI (Worker/Durable Objects runtime), and the interactive state picker now filters out CLI-incompatible state adapters.
+- 0b63791: Raise the default message dedupe TTL from 5 to 10 minutes so it outlives the longest platform redelivery window. Slack's Events API retries up to ~5 minutes after the original delivery — exactly at the old TTL boundary, where a retried event could miss the expired dedupe entry from its first processing and be handled twice. Configurable behavior is unchanged (`dedupeTtlMs` still overrides).
+- 0c761f1: docs(adapters): add Dial as a vendor-official adapter (`@getdial/chat-sdk-adapter`) to the catalog, docs listing, and CLI scaffold spec
+- 24a04d5: docs(adapters): add Photon as a vendor-official adapter (`@photon-ai/chat-adapter-imessage`) to the catalog, docs listing, and CLI scaffold spec
+- 076fe5d: preserve skipped mention routing for debounce and message patterns
+
 ## 4.32.0
 
 ### Minor Changes
